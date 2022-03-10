@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- fontawesomme -->
+    <script src="https://kit.fontawesome.com/ce75f2dd76.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+        <video id="myvid" autoplay loop muted>
+            <source src="gfx/video.mp4" type="video/mp4">
+        </video>
+        <header id="header">
+            <h1 id="welcomemsg" class="welcomemsg "></h1>
+            <div class="logo ">
+                <img src="gfx/livemusic_logo.svg" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Scenen</a></li>
+                    <li><a href="#">Kunstnere</a></li>
+                    <li><a href="#">Book et band</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    
+                </ul>
+            </nav>
+            
+            <div class="some">
+                <img src="gfx/twitter.svg" alt="">
+                <img src="gfx/instagram.svg" alt="">
+                <img src="gfx/linkedin.svg" alt="">
+            </div>
+        </header>
+        <div class="hero-text">
+            <div class="countdown">
+               
+                <p id="demo"></p>
+            </div>
+            <div class="mutebtn" onclick="changeImg()">
+                <img id="vidsound" alt="">
+            </div>
+        </div>
+    </div>
+    <main> 
+        <div class="instruments">
+            <div>
+                <img src="gfx/record.svg" alt="" class="cover" onclick="recordSound()">
+                <audio id="record">
+                    <source src="media/scratch.wav" type="audio/wav">
+                    </audio>
+            </div>
+            <div>
+                <img src="gfx/guitar.svg" alt="" class="cover" onclick="guitarSound()">
+
+                <audio id="guitar">
+                    <source src="media/guitar.wav" type="audio/wav">
+                    </audio>
+            </div>
+    
+            <div>
+                <img src="gfx/harpe.svg" alt="" class="cover" onclick="harpSound()"> 
+
+                <audio id="harp">
+                    <source src="media/486952__nathanmanaker__harp-flourish.mp3" type="audio/mp3">
+                    </audio>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_gc">
+            <div>
+                <img src="gfx/livemusic_logo.svg" alt="" class="cover">
+
+                <div>
+                    <address>
+                        <p>Live Music</p>
+                        <a href="">Lydstudie Stræde 12 <br>
+                        9000 Aalborg
+                        </a> 
+                        <br>
+                        <a href="mailto:mail@livemusic.dk">mail@livemusic.dk</a><br>
+                       <a href="">www.mail@livemusic.dk</a>
+                       <br>
+                        <a href="tel:+4580809090">Tlf 80 80 90 90</a>
+                      </address>
+                      
+                      <i class="fa-solid fa-lock" onclick="showlogin()"></i>
+
+                </div>
+
+            </div>
+            <div class="newsletter">
+                <form action="" id="newsletterform">
+                    <h2>Tilmeld dig til nyhedsbrev og vind fede præmier</h2>
+    
+                    <input type="mail" placeholder="skriv din mailadresse her" id="newsemail">
+
+                    <p id="email-errormsg"></p>
+
+                    <button>Tilmed nyhedsbredv</button>
+                </form>
+            </div>
+
+        </div>
+        <div id="loginform">
+
+            <div class="forms">
+                <form action="" id="myform">
+                    <div id="myformdisplay">
+                    <label for="username">Brugernavn</label>
+                    <input type="text" id="username" placeholder="Dit brugernavn">
+            
+                    <label for="password">Kodeord:</label>
+                    <input type="password" id="password" placeholder="kodeord">
+                    </div>
+                    <button id="view">Login</button>
+                   
+                </form>
+            
+                 <h3 id="errormsg"></h3>
+            
+                <form action="" id="newmember">
+                    <div id="newmemberdisplay">
+            
+                        <label for="name">Fornavn</label>
+                        <input type="text" id="name" placeholder="Fornavn">
+                
+                        <label for="lastnavn">Fornavn</label>
+                        <input type="text" id="lastname" placeholder="Efternavn">
+                
+                        <label for="email">E-mail</label>
+                        <input type="email" placeholder="Email" id="ademail">
+                
+                        <label for="brugernavn">Brugernavn</label>
+                        <input type="text"  id="brugernavn" placeholder="Brugernavn">
+                
+                        <h4 id="passworderror"></h4>
+                
+                        <label for="adpassword">Adgangskode</label>
+                        <input type="password" placeholder="Brugernavn" id="adpassword">
+                
+                        <label for="repeatpassword">Gentag adgangskode</label>
+                        <input type="password" name="" placeholder="Gentag adgangskode" id="repeatpassword">
+                        <button>Opret medlem</button>
+                    </div>
+                </form>
+                <button id="nytmedlembtn" onclick="onClick()">Ny medlem</button>
+        </div>
+
+        
+    </header>
+    <div id="oprettet">
+        <h2>Tillykke du er nu oprettet</h2>
+    </div>
+    <div id="velkommen"></div>
+    </footer>
+
+    <script src="js/sound.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/instruments.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/mail.js"></script>
+</body>
+</html>
